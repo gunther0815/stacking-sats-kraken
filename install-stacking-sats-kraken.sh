@@ -2,7 +2,7 @@
 
 # https://github.com/dennisreimann/stacking-sats-kraken
 
-# USERNAME=stackingsats
+USERNAME=stackingsats
 APP_DATA_DIR=/home/pi/stacking-sats-kraken
 HOME_DIR=/home/$USERNAME
 CONFIG_FILE=$APP_DATA_DIR/.env
@@ -127,7 +127,7 @@ fi
     echo "Switch to the '$USERNAME' user and adapt the settings in $CONFIG_FILE"
 
     # setting value in raspi blitz config
-     /home/pi/config.scripts/blitz.conf.sh set stackingSatsKraken "on"
+    # /home/pi/config.scripts/blitz.conf.sh set stackingSatsKraken "on"
   else
     echo "STACKING-SATS-KRAKEN already installed."
   fi
@@ -157,7 +157,7 @@ if [ "$1" = "0" ] || [ "$1" = "off" ]; then
     echo "*** REMOVING STACKING-SATS-KRAKEN ***"
 
     # setting value in raspi blitz config
-     /home/admin/config.scripts/blitz.conf.sh set stackingSatsKraken "off"
+    # /home/pi/config.scripts/blitz.conf.sh set stackingSatsKraken "off"
 
     # remove config
     sudo rm -rf $APP_DATA_DIR
