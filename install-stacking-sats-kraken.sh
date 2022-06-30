@@ -2,7 +2,7 @@
 
 # https://github.com/dennisreimann/stacking-sats-kraken
 
-USERNAME=stackingsats
+USERNAME=pi
 APP_DATA_DIR=/home/pi/stacking-sats-kraken
 HOME_DIR=/home/$USERNAME
 CONFIG_FILE=$APP_DATA_DIR/.env
@@ -28,7 +28,7 @@ if [ "$1" = "1" ] || [ "$1" = "on" ]; then
     # /home/pi/config.scripts/bonus.nodejs.sh on
 
     # add user
-    sudo adduser --disabled-password --gecos "" $USERNAME
+    # sudo adduser --disabled-password --gecos "" $USERNAME
 
     # install stacking-sats-kraken
     cd $HOME_DIR
@@ -36,12 +36,12 @@ if [ "$1" = "1" ] || [ "$1" = "on" ]; then
     # sudo -u $USERNAME tar -xzf v$SCRIPT_VERSION.tar.gz
     # sudo -u $USERNAME mv stacking-sats-kraken{-$SCRIPT_VERSION,}
     # sudo -u $USERNAME rm v$SCRIPT_VERSION.tar.gz
-    cd stacking-sats-kraken
+    #cd stacking-sats-kraken
     # sudo -u $USERNAME npm install
-    if ! [ $? -eq 0 ]; then
-        echo "FAIL - npm install did not run correctly, aborting"
-        exit 1
-    fi
+    #if ! [ $? -eq 0 ]; then
+    #    echo "FAIL - npm install did not run correctly, aborting"
+    #    exit 1
+    #fi
 
     # setup stacking config
     sudo mkdir -p $APP_DATA_DIR
